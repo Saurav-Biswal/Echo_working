@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 @OptIn(FlowPreview::class)
 class LibraryViewModel(
@@ -107,7 +108,16 @@ class LibraryViewModel(
     // --------------------------------------------------
 
     fun clearSearch() {
-
         _searchQuery.value = ""
+    }
+
+    // --------------------------------------------------
+    // DELETE MEMORY
+    // --------------------------------------------------
+
+    fun deleteMemory(memory: MemoryEntity) {
+        viewModelScope.launch {
+            memoryDao.delete(memory)
+        }
     }
 }

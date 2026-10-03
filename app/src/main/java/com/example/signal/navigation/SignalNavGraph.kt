@@ -46,6 +46,13 @@ fun SignalNavGraph(
                     navController.navigate(
                         SignalRoutes.LIBRARY
                     )
+                },
+                onMemoryClick = { memoryId ->
+                    navController.navigate(
+                        SignalRoutes.details(
+                            memoryId
+                        )
+                    )
                 }
             )
         }

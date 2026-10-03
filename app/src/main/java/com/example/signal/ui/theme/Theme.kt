@@ -4,26 +4,26 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
-private val SignalLightColors = lightColorScheme(
-    primary = SignalBlue,
-    onPrimary = SignalSurface,
+private val EchoLightColors = lightColorScheme(
+    primary        = EchoDarkGreen,
+    onPrimary      = EchoSurface,
 
-    secondary = SignalViolet,
-    onSecondary = SignalSurface,
+    secondary      = EchoMint,
+    onSecondary    = EchoTextPrimary,
 
-    tertiary = SignalLime,
-    onTertiary = SignalTextPrimary,
+    tertiary       = EchoMintBright,
+    onTertiary     = EchoTextPrimary,
 
-    background = SignalBackground,
-    onBackground = SignalTextPrimary,
+    background     = EchoBackground,
+    onBackground   = EchoTextPrimary,
 
-    surface = SignalSurface,
-    onSurface = SignalTextPrimary,
+    surface        = EchoSurface,
+    onSurface      = EchoTextPrimary,
 
-    surfaceVariant = SignalSurfaceSoft,
-    onSurfaceVariant = SignalTextSecondary,
+    surfaceVariant = EchoSurfaceSoft,
+    onSurfaceVariant = EchoTextSecondary,
 
-    outline = SignalBorder
+    outline        = EchoBorder
 )
 
 @Composable
@@ -31,8 +31,8 @@ fun SignalTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
-        colorScheme = SignalLightColors,
-        typography = SignalTypography,
-        content = content
+        colorScheme = EchoLightColors,
+        typography  = SignalTypography,
+        content     = content
     )
 }
